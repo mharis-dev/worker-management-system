@@ -1,0 +1,79 @@
+/* RESET (important) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;        /* top pe chipka rahe */
+  top: 0;
+  left: 0;
+  width: 100%;            /* full screen width */
+  height: 60px;
+  background-color: #a5d6a7; /* light green */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 1000;          /* sab se upar */
+}
+
+/* LOGO */
+.logo {
+  color: #1b5e20;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* NAV LINKS RIGHT SIDE */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1b5e20;
+  font-weight: 600;
+  padding: 6px 10px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #2e7d32;
+  color: white;
+  border-radius: 5px;
+}
+
+/* MENU ICON (mobile) */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #1b5e20;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #a5d6a7;
+    flex-direction: column;
+    width: 180px;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
